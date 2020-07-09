@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style type="text/css">
+		.details{
+			width: 83%;
+			padding: 1%;
+			margin: 5%;
+			border: 3px solid black;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			background-color: grey;
+
+
+		}
+		p{
+			font-size:25px;
+			font-weight: bold;
+		}
+		#nature{
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="details">
+		<img  id="nature" src="jyo1.jpg"width="250px"height="250px" >
+		<div class="info">
+			<p>Image related:Flowers</p>
+			<p>Location:india</p>
+			<p>Image width:250px</p>
+			<p>Image height:250px</p>
+		</div>
+
+		</div>
+		<button type="submit"onclick="changeimage()">change image</button>		
+
+
+
+		<script type="text/javascript">
+			function changeimage()
+			{
+				document.getElementById('nature').src='jyo2.jpg';
+
+				var list=document.getElementsByClassName("info")[0];
+				list.getElementsByTagName("p")[0].
+				textContent="Image related:Nature";
+				list.getElementsByTagName("p")[1].
+				textContent="Iocation:TN";
+				list.getElementsByTagName("p")[2].
+				textContent="Image width:250px";
+				list.getElementsByTagName("p")[3].
+				textContent="Image height:250px";
+
+			}
+		</script>
+
+</body>
+</html>
